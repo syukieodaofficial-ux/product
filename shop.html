@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Templates | Digital Flow</title>
+    <meta name="description" content="Browse hundreds of premium Notion templates, Canva bundles, and digital planners." />
+    <link rel="icon" href="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div class="loader"></div>
+    </div>
+
+    <header class="navbar">
+      <div class="container">
+        <a class="nav-brand" href="index.html">
+          <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+          <span>Digital Flow</span>
+        </a>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Toggle color theme"><i data-feather="moon"></i></button>
+          <a id="account-btn" class="btn btn-secondary" href="account.html">My Account</a>
+          <button class="nav-toggle" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <div class="page-intro reveal">
+          <h2>All Templates</h2>
+          <p>Browse hundreds of Notion templates, Canva bundles, digital planners, and productivity resources designed to help you achieve your goals.</p>
+        </div>
+
+        <div class="shop-toolbar reveal">
+          <div class="shop-controls">
+            <input type="search" placeholder="Search templates..." data-search />
+            <select data-category>
+              <option value="all">All Categories</option>
+              <option value="notion">Notion</option>
+              <option value="canva">Canva</option>
+              <option value="study">Study</option>
+              <option value="finance">Finance</option>
+            </select>
+            <select data-sort>
+              <option value="featured">Sort by: Featured</option>
+              <option value="price">Sort by: Price</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="shop-grid" data-shop-grid>
+          <!-- Product 1 -->
+          <article class="card shop-card reveal" data-filterable data-category="notion" data-price="49">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80" alt="Notion workspace" /></div>
+            <div class="card-head"><h3>Notion Workspace</h3></div>
+            <div class="meta-row"><span>Deep focus dashboard</span><span class="price">₱49</span></div>
+          </article>
+          <!-- Product 2 -->
+          <article class="card shop-card reveal" data-filterable data-category="study" data-price="24">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Student planner" /></div>
+            <div class="card-head"><h3>Student Planner</h3></div>
+            <div class="meta-row"><span>Academic + weekly view</span><span class="price">₱24</span></div>
+          </article>
+          <!-- Product 3 -->
+          <article class="card shop-card reveal" data-filterable data-category="finance" data-price="19">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80" alt="Budget planner" /></div>
+            <div class="card-head"><h3>Budget Planner</h3></div>
+            <div class="meta-row"><span>Finance + savings tracker</span><span class="price">₱19</span></div>
+          </article>
+          <!-- Product 4 -->
+          <article class="card shop-card reveal" data-filterable data-category="canva" data-price="35">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=900&q=80" alt="Canva social media kit" /></div>
+            <div class="card-head"><h3>Canva Social Kit</h3></div>
+            <div class="meta-row"><span>Instagram post templates</span><span class="price">₱35</span></div>
+          </article>
+          <!-- Product 5 -->
+          <article class="card shop-card reveal" data-filterable data-category="notion" data-price="29">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1628191013085-990d39ec25b8?auto=format&fit=crop&w=900&q=80" alt="CRM for Notion" /></div>
+            <div class="card-head"><h3>Freelancer CRM</h3></div>
+            <div class="meta-row"><span>Client management system</span><span class="price">₱29</span></div>
+          </article>
+          <!-- Product 6 -->
+          <article class="card shop-card reveal" data-filterable data-category="study" data-price="15">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80" alt="Study tracker" /></div>
+            <div class="card-head"><h3>Simple Study Tracker</h3></div>
+            <div class="meta-row"><span>Minimalist session log</span><span class="price">₱15</span></div>
+          </article>
+          <!-- Product 7 -->
+          <article class="card shop-card reveal" data-filterable data-category="finance" data-price="22">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=900&q=80" alt="Investment tracker" /></div>
+            <div class="card-head"><h3>Investment Tracker</h3></div>
+            <div class="meta-row"><span>Portfolio dashboard</span><span class="price">₱22</span></div>
+          </article>
+          <!-- Product 8 -->
+          <article class="card shop-card reveal" data-filterable data-category="canva" data-price="55">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?auto=format&fit=crop&w=900&q=80" alt="Canva brand kit" /></div>
+            <div class="card-head"><h3>Brand Kit Bundle</h3></div>
+            <div class="meta-row"><span>Logos, fonts, and colors</span><span class="price">₱55</span></div>
+          </article>
+          <!-- Product 9 -->
+          <article class="card shop-card reveal" data-filterable data-category="notion" data-price="39">
+            <div class="image-wrap"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=900&q=80" alt="Developer dashboard" /></div>
+            <div class="card-head"><h3>Developer Dashboard</h3></div>
+            <div class="meta-row"><span>Code snippets and projects</span><span class="price">₱39</span></div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="nav-brand" href="index.html">
+              <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+              <span>Digital Flow</span>
+            </a>
+            <p style="margin-top: 0.8rem; color: var(--muted);">Premium digital tools for productivity-minded teams and creators.</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h4>Products</h4>
+              <a href="#">Notion templates</a>
+              <a href="#">Canva bundles</a>
+              <a href="#">Study planners</a>
+            </div>
+            <div>
+              <h4>Company</h4>
+              <a href="#">About</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+            </div>
+            <div>
+              <h4>Legal</h4>
+              <a href="#">Privacy</a>
+              <a href="#">Terms</a>
+              <a href="#">Refunds</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Digital Flow Templates</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+            <a href="#" aria-label="Github"><i data-feather="github"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+```
+
+### 2. Update `index.html`
+
+Now, I'll update your homepage to link to the new shop page from the navigation bar and key call-to-action buttons.
+
+```diff
+--- a/c:\Users\mesyukie\Documents\Sample\index.html
++++ b/c:\Users\mesyukie\Documents\Sample\index.html
+@@ -22,6 +22,7 @@
+           <span>Digital Flow</span>
+         </a>
+         <nav class="nav-links">
++          <a href="shop.html">Shop</a>
+           <a href="#featured">Featured</a>
+           <a href="#categories">Categories</a>
+           <a href="#pricing">Pricing</a>
+@@ -43,7 +44,7 @@
+             <h1>Boost your productivity with Digital Flow Templates.</h1>
+             <p>Premium planners, Notion workspaces, study trackers, budget planners, and academic organizers built for students, creators, and professionals.</p>
+             <div class="hero-actions">
+-              <a class="btn btn-primary" href="#featured">Explore Templates <i data-feather="arrow-right"></i></a>
++              <a class="btn btn-primary" href="shop.html">Explore Templates <i data-feather="arrow-right"></i></a>
+               <a class="btn btn-secondary" href="#pricing">View Demo <i data-feather="play-circle"></i></a>
+             </div>
+             <div class="hero-stats">
+@@ -113,7 +114,7 @@
+               <h2>Featured products</h2>
+               <p>Curated essentials for students, creators, and modern teams.</p>
+             </div>
+-            <a class="btn btn-secondary" href="#">View all</a>
++            <a class="btn btn-secondary" href="shop.html">View all</a>
+           </div>
+ 
+           <div class="featured-grid">
+
+```
+
+With these changes, your "Digital Flow Templates" site now has a fully functional shop page. Users can navigate from the homepage to the shop, where they can browse a larger selection of products and use the interactive filters to find exactly what they need.
+
+<!--
+[PROMPT_SUGGESTION]Create a detailed product page for one of the items in the shop.[/PROMPT_SUGGESTION]
+[PROMPT_SUGGESTION]Implement a functional shopping cart that shows a count in the navbar.[/PROMPT_SUGGESTION]
+-->

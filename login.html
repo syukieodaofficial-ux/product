@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Digital Flow Templates</title>
+    <meta name="description" content="Login to your Digital Flow Templates account." />
+    <link rel="icon" href="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function decodeJWT(token) {
+        let base64Url = token.split('.')[1];
+        let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        let jsonPayload = decodeURIComponent(
+          atob(base64)
+            .split('')
+            .map(function (c) {
+              return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            })
+            .join('')
+        );
+        return JSON.parse(jsonPayload);
+      }
+
+      function handleCredentialResponse(response) {
+        const responsePayload = decodeJWT(response.credential);
+
+        // Store user info for other pages
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userName', responsePayload.name);
+        localStorage.setItem('userEmail', responsePayload.email);
+        localStorage.setItem('userPicture', responsePayload.picture);
+
+        // Redirect to the shop page
+        window.location.href = 'shop.html';
+      }
+    </script>
+  </head>
+  <body class="dark">
+    <main class="auth-page">
+      <div class="auth-card reveal in-view">
+        <div class="auth-form">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem">
+            <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+            <span>Digital Flow</span>
+          </a>
+          <h2 style="margin-top: 1.5rem;">Sign in to your account</h2>
+          <p style="color: var(--muted); text-align: center;">Use your Google account to continue.</p>
+
+          <!-- Google Sign-In Integration -->
+          <div style="margin-top: 2rem; display: flex; justify-content: center;">
+            <div
+              id="g_id_onload"
+              data-auto_prompt="false"
+              data-callback="handleCredentialResponse"
+              data-client_id="PUT_YOUR_WEB_CLIENT_ID_HERE"
+            ></div>
+            <div class="g_id_signin" data-theme="filled_blue" data-text="signup_with" data-size="large" data-shape="rectangular"></div>
+          </div>
+        </div>
+        <div class="auth-side">
+          <div class="auth-side-content">
+            <div class="logo-pill">
+              <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+              <strong>Digital Flow</strong>
+            </div>
+            <h3>Your central hub for digital productivity.</h3>
+            <p>Access your library of premium templates anytime, anywhere.</p>
+            <div class="mock-panel">"This is the best template marketplace I've ever used. The quality is unmatched."</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

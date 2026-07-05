@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account | Digital Flow Templates</title>
+    <meta name="description" content="Create your Digital Flow Templates account." />
+    <link rel="icon" href="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark">
+    <main class="auth-page">
+      <div class="auth-card reveal in-view">
+        <div class="auth-form">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem">
+            <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+            <span>Digital Flow</span>
+          </a>
+          <h2>Create your account</h2>
+          <p style="color: var(--muted)">Start your productivity journey today.</p>
+
+          <div class="social-row" style="margin-top: 1.5rem">
+            <button class="social-btn"><i data-feather="github"></i> GitHub</button>
+            <button class="social-btn"><i data-feather="chrome"></i> Google</button>
+          </div>
+
+          <div class="divider"><span>OR</span></div>
+
+          <form>
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="••••••••" required />
+            </div>
+            <div class="auth-options">
+              <label><input type="checkbox" id="terms-agree" required /> I agree to the <a href="#">Terms</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem">Create Account</button>
+          </form>
+          <p style="text-align: center; margin-top: 1.5rem; color: var(--muted)">
+            Already have an account? <a href="login.html" style="font-weight: 700; color: var(--text)">Login</a>
+          </p>
+        </div>
+        <div class="auth-side">
+          <div class="auth-side-content">
+            <div class="logo-pill">
+              <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+              <strong>Digital Flow</strong>
+            </div>
+            <h3>Your central hub for digital productivity.</h3>
+            <p>Access your library of premium templates anytime, anywhere.</p>
+            <div class="mock-panel">"This is the best template marketplace I've ever used. The quality is unmatched."</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
