@@ -7,39 +7,10 @@
     <meta name="description" content="Login to your Digital Flow Templates account." />
     <link rel="icon" href="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-    <script src="https://accounts.google.com/gsi/client" async></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="style.css" />
-    <script>
-      function decodeJWT(token) {
-        let base64Url = token.split('.')[1];
-        let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        let jsonPayload = decodeURIComponent(
-          atob(base64)
-            .split('')
-            .map(function (c) {
-              return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-            })
-            .join('')
-        );
-        return JSON.parse(jsonPayload);
-      }
-
-      function handleCredentialResponse(response) {
-        const responsePayload = decodeJWT(response.credential);
-
-        // Store user info for other pages
-        localStorage.setItem('isLoggedIn', 'true');
-        localStorage.setItem('userName', responsePayload.name);
-        localStorage.setItem('userEmail', responsePayload.email);
-        localStorage.setItem('userPicture', responsePayload.picture);
-
-        // Redirect to the shop page
-        window.location.href = 'shop.html';
-      }
-    </script>
   </head>
   <body class="dark">
     <main class="auth-page">
@@ -49,19 +20,25 @@
             <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
             <span>Digital Flow</span>
           </a>
-          <h2 style="margin-top: 1.5rem;">Sign in to your account</h2>
-          <p style="color: var(--muted); text-align: center;">Use your Google account to continue.</p>
+          <h2 style="margin-top: 1.5rem; text-align: center;">Sign in to your account</h2>
 
-          <!-- Google Sign-In Integration -->
-          <div style="margin-top: 2rem; display: flex; justify-content: center;">
-            <div
-              id="g_id_onload"
-              data-auto_prompt="false"
-              data-callback="handleCredentialResponse"
-              data-client_id="PUT_YOUR_WEB_CLIENT_ID_HERE"
-            ></div>
-            <div class="g_id_signin" data-theme="filled_blue" data-text="signup_with" data-size="large" data-shape="rectangular"></div>
-          </div>
+          <form style="margin-top: 1.5rem;">
+            <div class="field">
+              <label for="username">Email</label>
+              <input type="text" id="username" name="username" placeholder="you@example.com" />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="••••••••" />
+            </div>
+            <div class="auth-options">
+              <label><input type="checkbox" /> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem">Login</button>
+          </form>
+          <p style="text-align: center; margin-top: 1.5rem; color: var(--muted)">
+            Don't have an account? <a href="register.html" style="font-weight: 700; color: var(--text)">Sign up</a>
+          </p>
         </div>
         <div class="auth-side">
           <div class="auth-side-content">
@@ -77,6 +54,7 @@
       </div>
     </main>
 
+    <div class="toast" role="status" aria-live="polite"></div>
     <script src="script.js"></script>
   </body>
 </html>
