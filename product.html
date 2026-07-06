@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details | Digital Flow</title>
+    <meta name="description" content="Browse hundreds of premium Notion templates, Canva bundles, and digital planners." />
+    <link rel="icon" href="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div class="loader"></div>
+    </div>
+
+    <header class="navbar">
+      <div class="container">
+        <a class="nav-brand" href="index.html">
+          <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+          <span>Digital Flow</span>
+        </a>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="index.html#featured">Featured</a>
+          <a href="index.html#categories">Categories</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Toggle color theme"><i data-feather="moon"></i></button>
+          <a id="account-btn" class="btn btn-secondary" href="account.html">My Account</a>
+          <button class="nav-toggle" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <!-- Product details will be injected here by script.js -->
+        <div id="product-detail-content" class="product-detail-grid">
+          <!-- Placeholder while loading -->
+          <p>Loading product details...</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© 2026 Digital Flow Templates</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

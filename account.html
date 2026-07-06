@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account | Digital Flow</title>
+    <meta name="description" content="Manage your account details and view your downloads." />
+    <link rel="icon" href="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a class="nav-brand" href="index.html">
+          <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+          <span>Digital Flow</span>
+        </a>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Toggle color theme"><i data-feather="moon"></i></button>
+          <a class="btn btn-primary" href="shop.html">Back to Shop</a>
+          <button class="nav-toggle" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <div class="page-intro reveal">
+          <h2>My Account</h2>
+          <p>View your account details and manage your settings.</p>
+        </div>
+
+        <div class="account-card card reveal">
+          <div class="account-details">
+            <div>
+              <h3>Welcome Back!</h3>
+              <p class="card-meta">You are logged in.</p>
+            </div>
+          </div>
+          <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© 2026 Digital Flow Templates</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+            <a href="#" aria-label="Github"><i data-feather="github"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

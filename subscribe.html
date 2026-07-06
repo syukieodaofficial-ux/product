@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscribe | Digital Flow</title>
+    <meta name="description" content="Get unlimited access to all templates with the All-Access Pass." />
+    <link rel="icon" href="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading-screen">
+      <div class="loader"></div>
+    </div>
+
+    <header class="navbar">
+      <div class="container">
+        <a class="nav-brand" href="index.html">
+          <img src="https://i.ibb.co/BJgZ71n/Screenshot-2026-07-05-182624.png" alt="Digital Flow logo" />
+          <span>Digital Flow</span>
+        </a>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Toggle color theme"><i data-feather="moon"></i></button>
+          <a id="account-btn" class="btn btn-secondary" href="account.html">My Account</a>
+          <button class="nav-toggle" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container" style="max-width: 650px; text-align: center;">
+        <div id="subscribe-content" class="reveal">
+            <!-- Subscription content will be managed by script.js -->
+            <h2>Unlock Everything</h2>
+            <p class="card-meta" style="font-size: 1.1rem; margin-bottom: 2rem;">You're about to get unlimited access to our entire library of templates.</p>
+            <article class="card pricing-card" style="text-align: left;">
+              <h3>Ultimate All-Access</h3>
+              <div class="price-label">₱299 / month</div>
+              <p class="card-meta">Complete your purchase to get started.</p>
+              <ul>
+                <li>Download all current templates</li>
+                <li>Access new templates monthly</li>
+                <li>No need to purchase one-by-one</li>
+              </ul>
+              <button id="confirm-subscription-btn" class="btn btn-primary" style="width: 100%;">Confirm & Pay</button>
+            </article>
+        </div>
+      </div>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
